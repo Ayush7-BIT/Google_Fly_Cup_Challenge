@@ -1,0 +1,20 @@
+Last Task --------------
+
+from google.cloud import aiplatform
+ 
+PROJECT = '[project-id]'
+LOCATION = '[region]'
+ENDPOINT_ID = '[your-endpoint-id]'
+ 
+endpoint = aiplatform.Endpoint(ENDPOINT_ID, project=PROJECT, location=LOCATION)
+ 
+instances = [{'pilot_id': [11],
+'ename': ['Practice'],
+'events_name':['Project Manhattan'],
+'minimum_time': [80.0]
+}]
+ 
+endpoint.predict(instances = instances)
+
+Done! 
+Please Do Star This Repository!!
